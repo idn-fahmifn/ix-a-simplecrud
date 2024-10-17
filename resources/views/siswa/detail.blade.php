@@ -4,39 +4,30 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            
             <div class="card mt-3">
                 <div class="card-body p-4">
                     <div class="table-responsive">
                         <table class="table table-bordered">
-                            <thead>
-                                <th>Nama</th>
-                                <th>NISN</th>
-                                <th>Gender</th>
-                                <th>Pilihan</th>
-                            </thead>
-                            <tbody>
-                                @foreach ($data as $item)
-                                <tr>
-                                    <td>{{$item->nama}}</td>
-                                    <td>{{$item->nisn}}</td>
-                                    <td>
-                                        @if($item->gender == 'laki-laki')
-                                        <span class="text-info">Laki - Laki</span>
-                                        @else
-                                        <span class="text-danger">Perempuan</span>
-                                        @endif
-                                    </td>
-                                    <td>
-                                        <form action="#" method="post">
-                                            @csrf
-                                            <button type="submit" class="btn btn-danger">Hapus</button>
-                                            <a href="" class="btn btn-info">Detail</a>
-                                        </form>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
+                            <tr>
+                                <th>Nama Lengkap</th>
+                                <td>Azra</td>
+                            </tr>
+                            <tr>
+                                <th>Nomor Induk Siswa (NIS)</th>
+                                <td>123123</td>
+                            </tr>
+                            <tr>
+                                <th>Nomor Induk Siswa Nasional (NISN)</th>
+                                <td>098098</td>
+                            </tr>
+                            <tr>
+                                <th>Jenis Kelamin</th>
+                                <td>Laki Laki</td>
+                            </tr>
+                            <tr>
+                                <th>Alamat</th>
+                                <td>Bogor</td>
+                            </tr>
                         </table>
                     </div>
                 </div>
