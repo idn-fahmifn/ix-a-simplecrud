@@ -29,7 +29,9 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-        // 
+        $input = $request->all();
+        Siswa::create($input);
+        return back()->with('success', 'Data siswa berhasil ditambahkan');
     }
 
     /**
