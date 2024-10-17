@@ -79,9 +79,10 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <form action="#" method="post">
+                                        <form action="{{route('siswa.destroy', $item->id)}}" method="post">
                                             @csrf
-                                            <button type="submit" class="btn btn-danger">Hapus</button>
+                                            {{method_field('DELETE')}}
+                                            <button type="submit" class="btn btn-danger" onclick="return confirm('Yakin mau dihapus?')">Hapus</button>
                                             <a href="" class="btn btn-info">Detail</a>
                                         </form>
                                     </td>

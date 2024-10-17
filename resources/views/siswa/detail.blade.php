@@ -7,22 +7,28 @@
             <div class="card mt-3">
                 <div class="card-body p-4">
                     <div class="table-responsive">
-                        <table class="table table-bordered">
+                        <table class="table table-striped">
                             <tr>
                                 <th>Nama Lengkap</th>
-                                <td>Azra</td>
+                                <td>{{$data->nama}}</td>
                             </tr>
                             <tr>
                                 <th>Nomor Induk Siswa (NIS)</th>
-                                <td>123123</td>
+                                <td>{{$data->nis}}</td>
                             </tr>
                             <tr>
                                 <th>Nomor Induk Siswa Nasional (NISN)</th>
-                                <td>098098</td>
+                                <td>{{$data->nisn}}</td>
                             </tr>
                             <tr>
                                 <th>Jenis Kelamin</th>
-                                <td>Laki Laki</td>
+                                <td>
+                                    @if ($data->gender == 'laki-laki')
+                                        <span class="bg-info p-1">Laki Laki</span>
+                                    @else
+                                        <span class="bg-danger p-1">Perempuan</span>
+                                    @endif
+                                </td>
                             </tr>
                             <tr>
                                 <th>Alamat</th>
