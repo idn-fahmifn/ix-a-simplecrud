@@ -12,7 +12,8 @@ class SiswaController extends Controller
      */
     public function index()
     {
-        return view('siswa.index');
+        $data = Siswa::all();
+        return view('siswa.index', compact('data'));
     }
 
     /**
@@ -28,10 +29,7 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all(); //ini mengambil nilai yang diinputkan dari form
-        Siswa::create($input); //jika nilainya sudah dapat, maka diinputkan melalui $input
-        return back()->with('success', 'Data siswa berhasil ditambahkan');
-
+        // 
     }
 
     /**

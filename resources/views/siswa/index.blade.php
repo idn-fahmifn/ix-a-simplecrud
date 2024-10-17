@@ -56,44 +56,6 @@
                     </form>
                 </div>
             </div>
-
-            <div class="card mt-2">
-                <div class="card-body p-4">
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
-                                <th>Nama</th>
-                                <th>NISN</th>
-                                <th>Gender</th>
-                                <th>Pilihan</th>
-                            </thead>
-                            <tbody>
-                                @foreach ($data as $item)
-                                <tr>
-                                    <td>{{$item->nama}}</td>
-                                    <td>{{$item->nism}}</td>
-                                    <td>
-                                        @if ($item->gender == 'laki-laki')
-                                            <span class="text-primary">Laki Laki</span>
-                                        @else
-                                           <span class="text-danger">Perempuan</span>
-                                        @endif
-                                    </td>
-                                    <td>
-                                        <form action="" method="post">
-                                            @csrf
-                                            <a href="" class="btn btn-info">Detail</a>
-                                            <button type="submit" class="btn btn-danger">Hapus</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
