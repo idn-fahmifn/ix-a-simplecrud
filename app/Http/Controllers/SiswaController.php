@@ -62,8 +62,10 @@ class SiswaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Siswa $siswa)
+    public function destroy($id)
     {
-        //
+        $data = Siswa::find($id);
+        $data->delete();
+        return back();
     }
 }

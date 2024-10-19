@@ -6,6 +6,16 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body p-4">
+
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Yeay! Berhasil</strong> Kamu menabahkan data baru.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+
+
                     <form action="{{route('siswa.store')}}" method="post">
                         @csrf
                         <div class="row">
@@ -83,7 +93,7 @@
                                             @csrf
                                             {{method_field('DELETE')}}
                                             <button type="submit" class="btn btn-danger" onclick="return confirm('Yakin mau dihapus?')">Hapus</button>
-                                            <a href="" class="btn btn-info">Detail</a>
+                                            <a href="{{route('siswa.show', $item->id)}}" class="btn btn-info">Detail</a>
                                         </form>
                                     </td>
                                 </tr>
