@@ -7,14 +7,32 @@
             <div class="card">
                 <div class="card-body p-4">
 
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>Yeay! Berhasil</strong> Kamu menabahkan data baru.
+
+                    <!-- Alert Failed -->
+                    @if ($errors->any())
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Qodarullah! Gagal input</strong>.
+                        <ul>
+                            @foreach ($errors->all() as $item)
+                                <li>{{ $item }}</li>
+                            @endforeach
+                        </ul>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+                    @endif
 
 
+                    <!-- Alert Succes -->
+                    @if (session('success'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Yeay! Berhasil</strong> {{session('success')}}.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    @endif
 
                     <form action="{{route('siswa.store')}}" method="post">
                         @csrf
@@ -59,8 +77,10 @@
                             </div>
                         </div>
                         <div class="row mt-4">
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Tambah Data</button>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">Tambah Data</button>
+                                </div>
                             </div>
                         </div>
                     </form>

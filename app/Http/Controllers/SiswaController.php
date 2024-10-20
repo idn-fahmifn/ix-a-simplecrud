@@ -30,6 +30,11 @@ class SiswaController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
+        $request->validate([
+            'nama' => 'required|min:3|max:50',
+            'nis' => 'min:5|max:15|required|unique:siswa',
+            'nisn' => 'min:5|max:15|required|unique:siswa',
+        ]);
         Siswa::create($input);
         return back()->with('success', 'Data siswa berhasil ditambahkan');
     }
