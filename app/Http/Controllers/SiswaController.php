@@ -59,9 +59,12 @@ class SiswaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Siswa $siswa)
+    public function update(Request $request, $id)
     {
-        //
+        $data = Siswa::find($id);
+        $input = $request->all();
+        $data->update($input);
+        return back()->with('success', 'Data siswa berhasil diubah');
     }
 
     /**

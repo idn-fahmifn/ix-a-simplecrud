@@ -16,3 +16,16 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('siswa', SiswaController::class);
 
 
+
+
+
+
+Route::view('/tampilan', 'layouts.template');
+
+Route::view('/create-tamu', 'tamu.create');
+
+
+
+
+
+

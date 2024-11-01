@@ -6,8 +6,9 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <form action="{{route('siswa.store')}}" method="post">
+                    <form action="{{route('siswa.update', $data->id)}}" method="post">
                         @csrf
+                        {{method_field('PUT')}}
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -53,7 +54,8 @@
                         <div class="row mt-4">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary">Tambah Data</button>
+                                    <button type="submit" class="btn btn-primary">Ubah data</button>
+                                    <a href="{{route('siswa.index')}}" class="btn btn-warning">Kembali</a>
                                 </div>
                             </div>
                         </div>
@@ -82,15 +84,15 @@
                                 <th>Jenis Kelamin</th>
                                 <td>
                                     @if ($data->gender == 'laki-laki')
-                                    <span class="bg-info p-1">Laki Laki</span>
+                                    <span class="badge badge-info p-1">Laki Laki</span>
                                     @else
-                                    <span class="bg-danger p-1">Perempuan</span>
+                                    <span class="badge badge-danger p-1">Perempuan</span>
                                     @endif
                                 </td>
                             </tr>
                             <tr>
                                 <th>Alamat</th>
-                                <td>Bogor</td>
+                                <td>{{$data->alamat}}</td>
                             </tr>
                         </table>
                     </div>

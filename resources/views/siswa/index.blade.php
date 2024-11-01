@@ -6,8 +6,6 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body p-4">
-
-
                     <!-- Alert Failed -->
                     @if ($errors->any())
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
