@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\TamuController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,13 +17,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('siswa', SiswaController::class);
 
 
-
-
-
-
-Route::view('/tampilan', 'layouts.template');
-
-Route::view('/create-tamu', 'tamu.create');
+// Logika Aplikasi untuk membuat fitur tamu
+Route::resource('tamu', TamuController::class);
 
 
 
