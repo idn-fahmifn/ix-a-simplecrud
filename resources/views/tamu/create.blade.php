@@ -11,34 +11,34 @@
                         <div class="row text-muted">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" name="" class="form-control mt-1 form-control-lg fw-light fs-6" placeholder="Nama Tamu">
+                                    <input type="text" name="nama_tamu" class="form-control mt-1 form-control-lg fw-light fs-6" placeholder="Nama Tamu">
                                 </div>
                             </div>
                         </div>
                         <div class="row text-muted">
                             <div class="col-md-6 mt-2">
                                 <div class="form-group">
-                                    <select name="" id="" class="form-control form-control-lg fw-light fs-6 mt-3 text-muted">
+                                    <select name="level" id="" class="form-control form-control-lg fw-light fs-6 mt-3 text-muted">
                                         <option value="">Pilih Level</option>
-                                        <option value="">Tamu VIP</option>
-                                        <option value="">Wali Santri</option>
-                                        <option value="">Visitor</option>
+                                        <option value="vip">Tamu VIP</option>
+                                        <option value="wali_santri">Wali Santri</option>
+                                        <option value="visitor">Visitor</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-6 mt-2">
                                 <div class="form-group">
-                                    <input type="text" name="" class="form-control form-control-lg fw-light fs-6 mt-3" placeholder="Tujuan">
+                                    <input type="text" name="tujuan" class="form-control form-control-lg fw-light fs-6 mt-3" placeholder="Tujuan">
                                 </div>
                             </div>
                             <div class="col-md-6 mt-2">
                                 <div class="form-group">
-                                    <input type="text" name="" class="form-control form-control-lg fw-light fs-6 mt-3" placeholder="Nama instansi">
+                                    <input type="text" name="nama_instansi" class="form-control form-control-lg fw-light fs-6 mt-3" placeholder="Nama instansi">
                                 </div>
                             </div>
                             <div class="col-md-6 mt-2">
                                 <div class="form-group">
-                                    <input type="text" name="" class="form-control form-control-lg fw-light fs-6 mt-3" placeholder="Alamat">
+                                    <input type="text" name="alamat" class="form-control form-control-lg fw-light fs-6 mt-3" placeholder="Alamat">
                                 </div>
                             </div>
                             <div class="col-md-12 mt-5">
