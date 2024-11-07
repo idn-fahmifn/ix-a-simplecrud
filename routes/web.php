@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Hallo ID-Networkers !';
 });
 
 Auth::routes();
@@ -19,6 +19,12 @@ Route::resource('siswa', SiswaController::class);
 
 // Logika Aplikasi untuk membuat fitur tamu
 Route::resource('tamu', TamuController::class);
+
+
+
+
+
+
 
 
 

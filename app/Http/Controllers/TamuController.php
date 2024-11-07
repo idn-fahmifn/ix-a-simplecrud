@@ -28,7 +28,11 @@ class TamuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // tangkap semua nilai yang diinputkan oleh user di form.
+
+        $data = $request->all();
+        Tamu::create($data);
+        return back()->with('success', 'Data berhasil dibuat');
     }
 
     /**
