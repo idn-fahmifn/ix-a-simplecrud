@@ -12,7 +12,7 @@ class TamuController extends Controller
      */
     public function index()
     {
-        //
+        return view('tamu.index');
     }
 
     /**
